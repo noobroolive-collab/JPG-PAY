@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d18">
+<title>JPJ PAY - Login</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #080d18;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.card {
+  width: 100%;
+  max-width: 390px;
+  padding: 30px 25px;
+  background: #121c30;
+  border: 1px solid #263b5c;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px #0008;
+}
+
+.logo {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+  color: #36a3ff;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #9eacc1;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+label {
+  display: block;
+  margin: 17px 0 9px;
+  font-size: 14px;
+  color: #dce7f7;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #344966;
+  background: #091426;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #1685ff;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 17px;
+  color: #aab6ca;
+  font-size: 13px;
+}
+
+.remember input {
+  width: 16px;
+  height: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 24px;
+  border: none;
+  border-radius: 10px;
+  background: #1685ff;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:active {
+  opacity: 0.8;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+a {
+  color: #48aaff;
+  text-decoration: none;
+}
+
+.footer {
+  text-align: center;
+  color: #7e8da5;
+  font-size: 12px;
+  margin-top: 28px;
+  line-height: 1.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <div class="logo">JPJ PAY</div>
+
+  <div class="subtitle">
+    Welcome Back! Login to Continue
+  </div>
+
+  <h2>Sign In</h2>
+
+  <form id="loginForm">
+
+    <label for="mobile">Mobile Number</label>
+    <input
+      type="tel"
+      id="mobile"
+      placeholder="Enter mobile number"
+      maxlength="10"
+      required
+    >
+
+    <label for="password">Password</label>
+    <input
+      type="password"
+      id="password"
+      placeholder="Enter password"
+      required
+    >
+
+    <div class="remember">
+      <input type="checkbox" id="remember">
+      <span>Remember Me</span>
+    </div>
+
+    <button type="submit">SIGN IN</button>
+
+  </form>
+
+  <div class="links">
+    <a href="#" id="forgot">Forgot Password?</a>
+    <a href="#" id="register">Create Account</a>
+  </div>
+
+  <div class="footer">
+    JPJ PAY<br>
+    Demo Interface • No real payments or accounts connected
+  </div>
+
+</div>
+
+<script>
+document.getElementById("loginForm")
+.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const mobile = document.getElementById("mobile").value;
+
+  if (!/^[0-9]{10}$/.test(mobile)) {
+    alert("Please enter a valid 10 digit mobile number.");
+    return;
+  }
+
+  alert("This is a demo login page. Authentication is not connected yet.");
+});
+
+document.getElementById("forgot")
+.addEventListener("click", function(event) {
+  event.preventDefault();
+  alert("Password recovery is not connected yet.");
+});
+
+document.getElementById("register")
+.addEventListener("click", function(event) {
+  event.preventDefault();
+  alert("Registration feature will be added later.");
+});
+</script>
+
+</body>
+</html>
