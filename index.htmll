@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JPJ PAY</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;min-height:100vh;
+ display:flex;align-items:center;justify-content:center;
+ padding:20px;background:#080d18;
+ color:white;font-family:Arial,sans-serif
+}
+.card{
+ width:100%;max-width:380px;padding:28px;
+ background:#121c30;border:1px solid #263b5c;
+ border-radius:20px;box-shadow:0 10px 40px #0008
+}
+.logo{text-align:center;font-size:34px;font-weight:bold;color:#36a3ff}
+.sub{text-align:center;color:#aab6ca;margin:10px 0 30px}
+h2{text-align:center}
+label{display:block;margin:18px 0 8px}
+input{
+ width:100%;padding:14px;border-radius:10px;
+ border:1px solid #344966;background:#091426;
+ color:white;font-size:16px
+}
+button{
+ width:100%;padding:15px;margin-top:22px;
+ border:0;border-radius:10px;background:#1685ff;
+ color:white;font-size:17px;font-weight:bold
+}
+.note{text-align:center;color:#9eacc1;font-size:12px;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="card">
+ <div class="logo">JPJ PAY</div>
+ <div class="sub">Welcome Back</div>
+ <h2>Sign In</h2>
+
+ <label>Mobile Number</label>
+ <input type="tel" placeholder="Enter mobile number">
+
+ <label>Password</label>
+ <input type="password" placeholder="Enter password">
+
+ <button onclick="alert('This is a demo login page. No account or payment is connected.')">
+ Sign In
+ </button>
+
+ <div class="note">
+ Demo website • No real payments or credentials
+ </div>
+</div>
+</body>
+</html>
